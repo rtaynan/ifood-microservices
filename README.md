@@ -46,4 +46,4 @@ In the default configuration you will have:
 - **iFood Gateway Server** running on port `5555`
 - **iFood Suggestion Server** running on port: `8082`, you will send the requests to this service
 
-After running the containers. When everyone is registered, you can test the application using swagger through the following link: http://localhost:5555/suggestion-server/swagger-ui.html
+After running the containers. when they're all registered you can test the application using swagger through the following link: http://localhost:5555/suggestion-server/swagger-ui.html
