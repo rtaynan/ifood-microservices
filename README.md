@@ -33,7 +33,7 @@ The architecture consists of four services:
 
 ## How to use
 
-To test this architecture you will need to have: **JDK 11+**, **Docker** and **Maven** installed
+To test this architecture you will need to have: **JDK 11+**, **Docker**, **Redis** and **Maven** installed
 
 - Clone this repo and enter it
 
