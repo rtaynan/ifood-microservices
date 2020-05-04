@@ -1,0 +1,10 @@
+# Busca config em config-server
+spring:
+  application:
+    name: 'suggestion-server'
+  profiles:
+    active: default
+  cloud:
+    config:
+      uri: ${CONFIG_URL:http://localhost:8888}
+      fail-fast: true

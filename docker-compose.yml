@@ -1,0 +1,53 @@
+version: '3'
+services:
+  cache:
+    image: redis:alpine
+    hostname: redis
+    ports:
+      - '6379:6379'
+  config:
+    build:
+      context: ./ifood-config-server
+      dockerfile: Dockerfile
+    ports:
+      - '8888:8888'
+  eureka:
+    build:
+      context: ./ifood-discovery-server
+      dockerfile: Dockerfile
+    ports:
+      - '8761:8761'
+    restart: on-failure
+    depends_on:
+      - config
+    links:
+      - config
+  zuul:
+    build:
+      context: ./ifood-gateway-server
+      dockerfile: Dockerfile
+    ports:
+      - '5555:5555'
+    restart: on-failure
+    depends_on:
+      - config
+      - eureka
+    links:
+      - config
+      - eureka
+  suggestion:
+    build:
+      context: ./ifood-suggestion-server
+      dockerfile: Dockerfile
+    ports:
+      - '8082:8082'
+    restart: on-failure
+    depends_on:
+      - config
+      - eureka
+      - zuul
+    links:
+      - config
+      - eureka
+      - zuul
+      - "cache:redis"
