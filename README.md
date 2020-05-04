@@ -26,7 +26,7 @@ Also, make it easy to deploy/run your service(s) locally (consider using some co
 ## Overview
 The architecture consists of four services:
 
-- `ifood-config-server`: All of our system configuration files are in the repository https://github.com/rtaynan/microservice-config and **iFood Config Server** will be responsible for reading the information in the repository and providing it to applications via HTTP requests from.
+- `ifood-config-server`: All of our system configuration files are in the repository `https://github.com/rtaynan/microservice-config` and **iFood Config Server** will be responsible for reading the information in the repository and providing it to applications via HTTP requests from.
 -`ifood-discovery-server`: Service Discovery Server created with **Eureka**
 -`ifood-gateway-server`: API gateway created with **Zuul** that uses the ifood-discovery-server service to send requests to services. It uses the **Ribbon** as a load balancer
 -`ifood-suggestion-server`: Simple REST service created with **Spring Boot** to suggest trails based on location.
@@ -46,4 +46,4 @@ In the default configuration you will have:
 - **iFood Gateway Server** running on port `5555`
 - **iFood Suggestion Server** running on port: `8082`, you will send the requests to this service
 
-After running the containers. when they're all registered you can test the application using swagger through the following link: http://localhost:5555/suggestion-server/swagger-ui.html
+After running the containers. when they're all registered you can test the application using swagger through the following link: `http://localhost:5555/suggestion-server/swagger-ui.html`
