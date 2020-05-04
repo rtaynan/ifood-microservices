@@ -28,7 +28,7 @@ The architecture consists of four services:
 
 - `ifood-config-server`: All of our system configuration files are in the repository `https://github.com/rtaynan/microservice-config` and **iFood Config Server** will be responsible for reading the information in the repository and providing it to applications through HTTP requests.
 - `ifood-discovery-server`: Service Discovery Server created with **Eureka**
-- `ifood-gateway-server`: API gateway created with **Zuul** that uses the ifood-discovery-server service to send requests to services. It uses the **Ribbon** as a load balancer
+- `ifood-gateway-server`: API gateway created with **Zuul** that uses the `ifood-discovery-server` to send the requests to the services. It uses **Ribbon** as Load Balancer
 - `ifood-suggestion-server`: Simple REST service created with **Spring Boot** to suggest trails based on location.
 
 ## How to use
