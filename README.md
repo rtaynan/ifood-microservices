@@ -26,10 +26,10 @@ Also, make it easy to deploy/run your service(s) locally (consider using some co
 ## Overview
 The architecture consists of four services:
 
-ifood-config-server: All of our system configuration files are in the https://github.com/rtaynan/microservice-config repository and iFood Config Server will be responsible for reading the information in the repository and providing it to applications via HTTP requests from.
-ifood-discovery-server: Service Discovery Server created with Eureka
-ifood-gateway-server: API gateway created with Zuul that uses the ifood-discovery-server service to send requests to services. It uses the ribbon as a load balancer
-ifood-suggestion-server: simple REST service created with Spring Boot to suggest trails based on location.
+- 'ifood-config-server': All of our system configuration files are in the https://github.com/rtaynan/microservice-config repository and **iFood Config Server** will be responsible for reading the information in the repository and providing it to applications via HTTP requests from.
+-'ifood-discovery-server': Service Discovery Server created with **Eureka**
+-'ifood-gateway-server': API gateway created with **Zuul** that uses the ifood-discovery-server service to send requests to services. It uses the **Ribbon** as a load balancer
+-'ifood-suggestion-serve'r: simple REST service created with **Spring Boot** to suggest trails based on location.
 
 ## How to use
 
